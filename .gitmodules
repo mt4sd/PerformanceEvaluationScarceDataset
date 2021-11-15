@@ -1,0 +1,6 @@
+[submodule "modules/MedMNIST"]
+	path = modules/MedMNIST
+	url = https://github.com/MedMNIST/MedMNIST.git
+[submodule "modules/IPDL"]
+	path = modules/IPDL
+	url = https://github.com/SolidusAbi/IPDL.git
