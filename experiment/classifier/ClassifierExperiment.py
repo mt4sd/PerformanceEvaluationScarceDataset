@@ -26,6 +26,8 @@ class ClassifierExperiment(ABC):
         #IP Estimation using Z-space as input
         self.z_input = True
 
+        self.n_classes_ = 2
+
     def train(self, train_loader: DataLoader, test_loader: DataLoader,
             tb_writer: SummaryWriter, n_epoch=800) -> None:
 
@@ -122,7 +124,7 @@ class ClassifierExperiment(ABC):
             it_val_inputs = self.model.encoder(it_val_inputs.to(self.device)).flatten(1)
         else:
             it_val_inputs = it_val_inputs.flatten(1).to(self.device)
-        it_val_targets = one_hot(it_val_targets.flatten(), num_classes=2).float().to(self.device) 
+        it_val_targets = one_hot(it_val_targets.flatten(), num_classes=self.n_classes_).float().to(self.device) 
 
         Kx, Ax = matrix_estimator(it_val_inputs, sigma=4)
         Ky, Ay = matrix_estimator(it_val_targets, sigma=.1)

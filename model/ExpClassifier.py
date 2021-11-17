@@ -5,7 +5,7 @@ from .SDAE import SDAE
 from IPDL import MatrixEstimator
 
 class ExpClassifier(nn.Module):
-    def __init__(self, sdae: SDAE, input_size = (128, 128), encoder_frozen = True) -> None:
+    def __init__(self, sdae: SDAE, input_size = (128, 128), n_classes = 2, encoder_frozen = True) -> None:
         super(ExpClassifier, self).__init__()
 
         output_size = np.array(input_size)
@@ -33,10 +33,7 @@ class ExpClassifier(nn.Module):
         in_features = (output_size.prod() * out_channels).astype(np.uint) if isinstance(output_size, np.ndarray) else output_size
 
         self.classifier = nn.Sequential(
-                nn.Linear(in_features, 1024),
-                nn.Sigmoid(),
-                MatrixEstimator(0.1),
-                nn.Linear(1024, 512),
+                nn.Linear(in_features, 512),
                 nn.Sigmoid(),
                 MatrixEstimator(0.1),
                 nn.Linear(512, 256),
@@ -45,7 +42,7 @@ class ExpClassifier(nn.Module):
                 nn.Linear(256, 64),
                 nn.Sigmoid(),
                 MatrixEstimator(0.1),
-                nn.Linear(64, 2),
+                nn.Linear(64, n_classes),
                 MatrixEstimator(0.1)
             )
 
