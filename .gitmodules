@@ -3,4 +3,4 @@
 	url = https://github.com/MedMNIST/MedMNIST.git
 [submodule "modules/IPDL"]
 	path = modules/IPDL
-	url = https://github.com/SolidusAbi/IPDL.git
+	url = https://github.com/mt4sd/IPDL.git
