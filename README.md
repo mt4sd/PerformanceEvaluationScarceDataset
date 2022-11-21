@@ -33,6 +33,7 @@ If you find our library useful in your research, please consider citing us:
  title = {Performance Evaluation of Deep Learning Models for Image Classification Over Small Datasets: Diabetic Foot Case Study},
  year = {2022}
 }
+```
 
 [1] Unpublished paper
 
