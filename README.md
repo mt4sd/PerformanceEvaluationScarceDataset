@@ -1,6 +1,6 @@
 # Performance Evaluation of Deep Learning Models for Image Classification Over Small Datasets: Diabetic Foot Case Study
 
-This project is designed to replicate the experiments of the paper [1]. Because the data used in the work is not public, this repository uses MedMNIST Breast Ultrasound as dataset. In order to reproduce the data scarcity problem, a random undersampling is applied to the dataset.
+This project is designed to replicate the experiments of the paper "Performance Evaluation of Deep Learning Models for Image Classification Over Small Datasets: Diabetic Foot Case Study". Because the data used in the work is not public, this repository uses MedMNIST Breast Ultrasound as dataset. In order to reproduce the data scarcity problem, a random undersampling is applied to the dataset.
 
 # Prerequisites
 * [Anaconda](https://www.anaconda.com/distribution/)
@@ -23,6 +23,17 @@ git clone --recurse-submodules [repository url]
 ```
 
 # References
+
+If you find our library useful in your research, please consider citing us:
+```
+@incollection{TODO,
+ author = {TODO},
+ booktitle = {TODO},
+ pages = {TODO},
+ title = {Performance Evaluation of Deep Learning Models for Image Classification Over Small Datasets: Diabetic Foot Case Study},
+ year = {2022}
+}
+
 [1] Unpublished paper
 
 # TODO
