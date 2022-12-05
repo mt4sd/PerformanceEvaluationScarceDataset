@@ -36,6 +36,7 @@ If you find our library useful in your research, please consider citing us:
   pages={124373-124386},
   doi={10.1109/ACCESS.2022.3225107}
 }
+```
 
 # TODO
 - [x] Explaining that MedMNIST Breast Ultrasound is used
